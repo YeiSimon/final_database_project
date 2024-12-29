@@ -1,0 +1,12 @@
+ALTER TABLE doctors ALTER COLUMN specialization TYPE character varying(255);
+ALTER TABLE doctors ALTER COLUMN phone TYPE character varying(60);
+CREATE TABLE medications (
+    medication_id SERIAL PRIMARY KEY,
+    appointment_id INTEGER NOT NULL REFERENCES appointments(appointment_id),
+    medication_name TEXT NOT NULL,
+    dosage TEXT NOT NULL,
+    frequency TEXT NOT NULL,
+    duration TEXT,
+    additional_instructions TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
