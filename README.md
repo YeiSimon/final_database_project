@@ -1,5 +1,3 @@
-以下是用繁體中文撰寫的 `README.md` 文件：
-
 ---
 
 # Final Project Database
